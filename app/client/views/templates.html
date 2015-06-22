@@ -1,0 +1,177 @@
+<template name="appLayout">
+	<div class="background">
+        {{> yield}}
+    </div>  
+</template>
+
+<template name="loading">
+	<div class="units-row">
+        <section class="wrapper unit-80">
+            <article class="units-row units-padding bg-lightgray">
+                <h1 class="brand"><a href="/"><img src="img/HBD_Logo_Final_Color.png" alt="HomeBuyer Discounts"></a></h1>    
+            </article>
+            
+            <article id="signup" class="units-row units-padding bg-turquoise">
+                <div class="loader-container animation-07">
+                  <div class="arc">
+                    <div class="arc-cube"></div>
+                  </div>
+                </div>
+
+                <h2 class="text-center">Please wait while we make sure your code is available.</h2>
+            </article>
+            
+            <article id="icons" class="units-row units-padding bg-blue">
+                     <ul class="blocks-3">
+                            <li>
+                                <i class="icon fa fa-pencil"></i>
+                                <h4>Sign Up</h4>
+                            </li>
+                            <li>
+                                <i class="fa fa-users"></i>
+                                <h4>Receive Member Only Discounts</h4>
+                            </li>
+                            <li>
+                                <i class="fa fa-money"></i>
+                                <h4>Save Money</h4>
+                            </li>
+                        </ul>
+            </article>
+            <article id="discounts" class="units-row units-padding bg-lightgray">
+                <div class="units-row">
+                    <div class="unit-100">
+                        <p>Featuring over 40 companies, such as:</p>
+                        <ul class="discounts blocks-3">
+                            <li><img src="/img/olindes_logo-1.png" alt="Olindes"><h4>25% off</h4></li>
+                            <li><img src="/img/haplins_logo-1.png" alt="Halpins Carpet"><h4>$200 off</h4></li>
+                            <li><img src="/img/gerry_lane-1.png" alt="Gerry Lane Enterprises"><h4>$50 off</h4></li>
+                            <li><img src="/img/keans_snag-1.png" alt="Kean's Cleaners"><h4>25% off</h4></li>
+                            <li><img src="/img/ez_baths-1.png" alt="EZ Baths of Louisiana"><h4>$500 off</h4></li>
+                            <li><img src="/img/herman-rickey-logo-1.png" alt="Rickey Heroman's Florist &amp; Gifts"><h4>40% off</h4></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article id="faux-footer" class="units-row units-padding bg-blue">
+                <h3 class="italic"><a href="https://homebuyerdiscounts.com/">HomeBuyerDiscounts.com</a></h3>
+            </article>
+        </section>
+    </div>
+</template>
+
+<template name="home">
+    <div class="units-row">
+        <section class="wrapper unit-80">
+            
+            <article class="units-row units-padding bg-lightgray">
+                <h1 class="brand"><a href="/"><img src="img/HBD_Logo_Final_Color.png" alt="HomeBuyer Discounts"></a></h1>    
+            </article>
+            <article id="signup" class="units-row units-padding bg-turquoise">
+                <div class="unit-100">
+                    {{#if availableCodes}}
+                        {{>codesAvailable}}
+                    {{else}}
+                        {{>codesNotAvailable}}
+                    {{/if}}
+                </div>
+            </article>
+            <article id="icons" class="units-row units-padding bg-blue">
+                     <ul class="blocks-3">
+                            <li>
+                                <i class="icon fa fa-pencil"></i>
+                                <h4>Sign Up</h4>
+                            </li>
+                            <li>
+                                <i class="fa fa-users"></i>
+                                <h4>Receive Member Only Discounts</h4>
+                            </li>
+                            <li>
+                                <i class="fa fa-money"></i>
+                                <h4>Save Money</h4>
+                            </li>
+                        </ul>
+            </article>
+            <article id="discounts" class="units-row units-padding bg-lightgray">
+                <div class="units-row">
+                    <div class="unit-100">
+                        <p>Featuring over 40 companies, such as:</p>
+                        <ul class="discounts blocks-3">
+                            <li><img src="/img/olindes_logo-1.png" alt="Olindes"><h4>25% off</h4></li>
+                            <li><img src="/img/haplins_logo-1.png" alt="Halpins Carpet"><h4>$200 off</h4></li>
+                            <li><img src="/img/gerry_lane-1.png" alt="Gerry Lane Enterprises"><h4>$50 off</h4></li>
+                            <li><img src="/img/keans_snag-1.png" alt="Kean's Cleaners"><h4>25% off</h4></li>
+                            <li><img src="/img/ez_baths-1.png" alt="EZ Baths of Louisiana"><h4>$500 off</h4></li>
+                            <li><img src="/img/herman-rickey-logo-1.png" alt="Rickey Heroman's Florist &amp; Gifts"><h4>40% off</h4></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article id="faux-footer" class="units-row units-padding bg-blue">
+                <h3 class="italic"><a href="https://homebuyerdiscounts.com/">HomeBuyerDiscounts.com</a></h3>
+            </article>
+            
+        </section>
+        
+    </div>
+</template>
+
+<template name="codesAvailable">
+    <h1>Sign up now</h1>
+    <h2>for your free $75 Membership</h2>
+    {{> signup}}
+    <p>HomeBuyer Discounts offers exclusive, members-only, discounted home products and services from local businesses.</p>
+</template>
+
+<template name="codesNotAvailable">
+    <h1>We're Sorry</h1>
+    <h2>But we've run out of codes.</h2>
+    {{> signup}}
+    <p>If you'd like to sign up for updates of future membership codes, sign up above to receive updates from HomeBuyer Discounts.</p>
+</template>
+
+<template name="signup">
+    <div class="signup-form">
+        <input type="text" placeholder="ENTER YOUR EMAIL" name="email" id="email">
+        <span class="btn bg-red" id="email-submit">SUBMIT</span>
+    </div>
+</template>
+
+<template name="thanks">
+    <div class="units-row">
+
+        <section class="wrapper unit-80">
+            
+            <article class="units-row units-padding bg-lightgray">
+                <h1 class="brand"><a href="/"><img src="img/HBD_Logo_Final_Color.png" alt="HomeBuyer Discounts"></a></h1>    
+            </article>
+            <article id="signup" class="units-row units-padding bg-turquoise">
+                <div class="unit-100">
+                        {{#if theCode}}
+                            <h1>Thank You!</h1>
+                            <h2>Your Code is {{theCode}}</h2>
+                        {{/if}}
+                         <a href="https://homebuyerdiscounts.com/homeowner-signup" target="_blank" class="btn btn-big bg-red">Sign Up Now!</a>
+                </div>
+            </article>
+            <article id="btn-area" class="units-row units-padding bg-lightgray">
+                <div class="units-row">
+                    <div class="unit-100">
+                        <p>If you have any questions please email <a href="mailto:info@homebuyerdiscounts.com">info@homebuyerdiscounts.com</a></p>
+                    </div>
+                </div>
+            </article>
+            <article id="faux-footer" class="units-row units-padding bg-blue">
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa fa-phone"></i><span><a href="tel://225-928-4119">225-928-4119</a></span>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i><span><a href="mailto:info@homebuyerdiscounts.com">info@homebuyerdiscounts.com</a></span>
+                    </li>
+                </ul>
+            </article>
+            
+        </section>
+        
+    </div>
+</template>

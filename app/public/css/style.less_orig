@@ -1,0 +1,132 @@
+@import "/less/kube.import.less";
+
+/* =============================================================================
+   Imports
+   ========================================================================== */
+@import url('/less/slick.less');
+@import url('/less/icomoon.less');
+@import url('http://fonts.googleapis.com/css?family=PT+Serif|Montserrat:700,400');
+
+/* =============================================================================
+   Layout Code
+   ========================================================================== */
+/*
+ * Authors: John Gibby @thatgibbyguy || Quinton Jason @quintonjasonjr
+ *
+ * --------------
+ *
+ * Based on Kube
+ * Detailed information about this CSS: http://imperavi.com/kube/
+ *
+
+
+/* Fonts ===================================================================== */
+
+
+/* ==|== CSS Styles, IDs & Elements ===================================================== */
+body { background-color: @main-turquoise; }
+.background { position: absolute; top: 0px; left: 0px; width: 100%; height: 40%; background-color: white; }
+.wrapper{ .centered; box-shadow: 7px 0 15px -4px rgba(0, 0, 0, 0.5), -7px 0 8px -4px rgba(0, 0, 0, 0.5);}
+span{ .upper; font-size: 1.25em;}
+article{ padding:  2em; }
+p{ font-size: 1.25em; }
+.units-row{ margin-bottom: 0; }
+h1{ .headlines; .upper;}
+h1.brand{ margin-bottom: 0; }
+.brand a img{ max-width: 150px; }
+h3{ .subhead; }
+h4{ .headlines; font-weight: normal; }
+#icons{ 
+	.blocks-3{ margin-top: 1.65em; }
+	.icon{ .show; font-size: 3em; width: 70px; height:70px; .rounded-corners(50%); padding: .25em; margin: 0 auto;background-color: lighten(@main-blue,7%);} 
+	h4{ .text-center; }
+}
+#discounts{ font-family: @pt-serif; }
+.discounts { .no-bull; .no-margin;
+	li{ background-color: white; padding: 1em;
+		img{ .show; margin: 0 auto;}
+		&:nth-child(3n){ margin-right: 0; }
+	}
+	h4{ color: @main-blue; .text-center; margin-top: 1em; }
+}
+
+.signup-form{ .clearfix;  padding: 1em 0 1.7em 0;
+	input#email{ .rounded-corners(7px); font-family: @montserrat; width: 63%; padding: 1.45em; font-size: 110%; float: left;}
+	span.btn.bg-red{ .btn; margin-top: -1px; float: right; width: 33%; font-size: 1.5em; .bg-red; padding: 1em;}
+}
+#signup{ p{ .italic; width: 95%; margin: 0 auto; } }
+#faux-footer{ padding: 2em; 
+	h3{ .no-margin; text-transform: inherit; }
+	a{ color: white; text-decoration: none; }
+	span{ text-transform: inherit; }
+	.footer-contact{ .no-bull; .clearfix; font-family: @pt-serif; display: inline-block; text-transform: inherit; margin: 0;}
+	li{ float: left; margin-right: 1.5em; }
+	.icon{ margin-right: 1em; width: 50px; height: 50px; background: @main-turquoise; .text-center; padding: .3em; .rounded-corners(50%); font-size: 2em; }
+}
+#btn-area p{ margin-top: 2em; margin-bottom: 0;}
+span.btn.bg-red{ .btn; .bg-red; width: 80%; font-size: 1.3em; padding: 1.9em 2em;}
+h1{ font-size: 4.5em; }
+h2{ font-size: 2.29em; }
+h3{ font-size: 1.718em; }
+h4{ font-size: 1.1em; }
+
+
+/* ==|== Custom LESS Variables ===================================================== */
+@pt-serif: 'PT Serif', serif;
+@montserrat: 'Montserrat', sans-serif;
+
+@main-turquoise: #04ae9a;
+@main-blue: #072744;
+@main-red: #aa2849;
+@main-lightgray: #f3f3f4;
+
+/* ==|== Custom LESS Mixins ===================================================== */
+
+.headlines{ font-family: @montserrat; font-weight: bold; }
+.subhead{ font-family: @pt-serif; font-weight: normal; }
+.bodycopy{  }
+.btn{ .rounded-corners(); padding: .9em 2em;  font-family: @montserrat; }
+.bg-blue{ background-color: @main-blue; color: white;}
+.bg-red{ background-color: @main-red; color: white; .transition(background-color .5s ease);
+  &:hover{ background: darken(@main-red, 15%); color: white; }
+}
+.bg-turquoise{ background-color: @main-turquoise; color: white;}
+.bg-lightgray{ background-color: @main-lightgray; color: @main-blue;}
+.no-margin{ margin: 0; }
+.no-padding{ padding: 0; }
+.upper{ text-transform: uppercase; }
+.centered{ text-align: center; }
+.italic{ font-style: italic; }
+.no-bull{ list-style: none; }
+.show{ display: block; }
+.hide{ display: none; }
+.rounded-corners (@radius: 10px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+
+/* ==|== Responsive Styles ===================================================== */
+
+@media @genericMobile{
+	article{ padding: 2em 0; }
+	.blocks-3 > li { width: 30.333%; float: left; margin-left: 3%;}
+}
+
+@media @genericPhablet{
+	.signup-form input#email{ width: 100%; margin-bottom: 1em; }
+	.signup-form span.btn.bg-red{ width: 100%; }
+	#btn-area span{ width: 100%; }
+}
+
+@media @genericPhone{ 
+	#faux-footer{ padding: 1em .2em; 
+		li{ margin-right: 0; }
+		.icon{ margin-right: .1em; }
+		.icon-phone{ margin-bottom: .25em; }
+	}
+
+}

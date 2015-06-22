@@ -1,0 +1,238 @@
+@import "/less/kube.import.less";
+
+/* =============================================================================
+   Imports
+   ========================================================================== */
+// @import url('../public/css/less/slick.less');
+// @import url('../public/css/less/icomoon.less');
+@import url('http://fonts.googleapis.com/css?family=PT+Serif|Montserrat:700,400');
+
+/* =============================================================================
+   Layout Code
+   ========================================================================== */
+/*
+ * Authors: John Gibby @thatgibbyguy || Quinton Jason @quintonjasonjr
+ *
+ * --------------
+ *
+ * Based on Kube
+ * Detailed information about this CSS: http://imperavi.com/kube/
+ *
+
+
+/* Fonts ===================================================================== */
+
+
+/* ==|== CSS Styles, IDs & Elements ===================================================== */
+body { background-color: @main-turquoise; }
+.background { position: absolute; top: 0px; left: 0px; width: 100%; height: 40%; background-color: white; }
+.wrapper{ .centered; box-shadow: 7px 0 15px -4px rgba(0, 0, 0, 0.5), -7px 0 8px -4px rgba(0, 0, 0, 0.5);}
+span{ .upper; font-size: 1.25em;}
+article{ padding:  2em; }
+p{ font-size: 1.25em; }
+.units-row{ margin-bottom: 0; }
+h1{ .headlines; .upper;}
+.brand a img{ max-width: 150px; }
+h3{ .subhead; }
+h4{ .headlines; font-weight: normal; }
+#icons{ 
+	li{ margin-top: 1.65em; }
+	i{ .show; font-size: 3em; width: 70px; height:70px; .rounded-corners(50%); padding: .25em; margin: 0 auto;background-color: lighten(@main-blue,7%);} 
+	h4{ .text-center }
+}
+#discounts{ font-family: @pt-serif; }
+.discounts { .no-bull; .no-margin;
+	li{ background-color: white; display: inline-block;   padding: 2em;
+		img{ .show; margin: 0 auto;}
+		&:nth-child(3n){ margin-right: 0; }
+	}
+	h4{ color: @main-blue; .text-center; margin-top: 1em; }
+}
+
+.btn.bg-red{ .btn; margin-top: -1px; fwidth: 33%; font-size: 1.5em; .bg-red;
+	&:hover{ background: darken(@main-red, 20%); }
+}
+
+.signup-form{ .clearfix;  padding: 1em 0 1.7em 0;
+	input#email{ .rounded-corners(7px); font-family: @montserrat; width: 63%; padding: 1.45em; font-size: 110%; float: left;}
+	span.btn.bg-red{ .btn; margin-top: -1px; float: right; width: 33%; font-size: 1.5em; .bg-red;
+		&:hover{ background: darken(@main-red, 20%); }
+	}
+}
+#signup{ p{ .italic; width: 95%; margin: 0 auto; } }
+#faux-footer{ padding: 2em; 
+	h3{ .no-margin; text-transform: inherit; }
+	a{ color: white; text-decoration: none; }
+	span{ text-transform: inherit; }
+	.footer-contact{ .no-bull; .clearfix; font-family: @pt-serif; display: inline-block; text-transform: inherit; margin: 0;}
+	li{ float: left; margin-right: 1.5em; }
+	i{ margin-right: 1em; width: 50px; height: 50px; background: @main-turquoise; .text-center; padding: .35em; .rounded-corners(50%); font-size: 2em; }
+}
+#btn-area p{ margin-top: 2em; margin-bottom: 0;}
+span.btn.bg-red{ .btn; .bg-red; width: 80%; font-size: 1.3em; padding: 1.9em 2em;
+	&:hover{ background: darken(@main-red, 20%); }
+}
+h1{ font-size: 4.5em; }
+h2{ font-size: 2.29em; }
+h3{ font-size: 1.718em; }
+h4{ font-size: 1.1em; }
+
+
+@-webkit-keyframes arc {
+  0% {
+    border-width: 30px;
+  }
+  25% {
+    border-width: 15px;
+  }
+  50% {
+    -webkit-transform: rotate(27deg);
+            transform: rotate(27deg);
+    border-width: 30px;
+  }
+  75% {
+    border-width: 15px;
+  }
+  100% {
+    border-width: 30px;
+  }
+}
+@keyframes arc {
+  0% {
+    border-width: 30px;
+  }
+  25% {
+    border-width: 15px;
+  }
+  50% {
+    -webkit-transform: rotate(27deg);
+            transform: rotate(27deg);
+    border-width: 30px;
+  }
+  75% {
+    border-width: 15px;
+  }
+  100% {
+    border-width: 30px;
+  }
+}
+
+.loader-container {
+  position: relative;
+  width: 100%;
+  height: 12em;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  overflow: hidden;
+}
+
+.cube {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: 0;
+}
+
+.cube-2d {
+  background-color: #eef8fc;
+}
+.arc {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  margin-left: -70px;
+  width: 140px;
+  height: 70px;
+  overflow: hidden;
+}
+
+.arc-cube {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  margin-left: -70px;
+  width: 140px;
+  height: 140px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-right-color: #eef8fc;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  -webkit-animation: arc 2s ease-in-out infinite;
+          animation: arc 2s ease-in-out infinite;
+  -webkit-transform: rotate(-200deg);
+      -ms-transform: rotate(-200deg);
+          transform: rotate(-200deg);
+}
+
+
+/* ==|== Custom LESS Variables ===================================================== */
+@pt-serif: 'PT Serif', serif;
+@montserrat: 'Montserrat', sans-serif;
+
+@main-turquoise: #04ae9a;
+@main-blue: #072744;
+@main-red: #aa2849;
+@main-lightgray: #f3f3f4;
+
+/* ==|== Custom LESS Mixins ===================================================== */
+
+.headlines{ font-family: @montserrat; font-weight: bold; }
+.subhead{ font-family: @pt-serif; font-weight: normal; }
+.bodycopy{  }
+.btn{ .rounded-corners(); padding: .9em 2em;  font-family: @montserrat; }
+.bg-blue{ background-color: @main-blue; color: white;}
+.bg-red{ background-color: @main-red; color: white;}
+.bg-turquoise{ background-color: @main-turquoise; color: white;}
+.bg-lightgray{ background-color: @main-lightgray; color: @main-blue;}
+.no-margin{ margin: 0; }
+.no-padding{ padding: 0; }
+.upper{ text-transform: uppercase; }
+.centered{ text-align: center; }
+.italic{ font-style: italic; }
+.no-bull{ list-style: none; }
+.show{ display: block; }
+.hide{ display: none; }
+.rounded-corners (@radius: 10px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+/* ==|== Responsive Styles ===================================================== */
+
+@media @genericMobile{
+	article{ padding: 2em 0; }
+	.blocks-3 > li { width: 30.333%; float: left; margin-left: 4%;
+		&:nth-of-type(3n-2){ margin-left: 0; }
+	}
+
+}
+
+@media @genericPhablet{
+	.signup-form input#email{ width: 100%; margin-bottom: 1em; }
+	.signup-form span.btn.bg-red{ width: 100%; }
+	#discounts li{ width: 48.5%; margin-left: 3%;
+		&:nth-of-type(odd){ margin-left: 0; }
+	}
+}
+
+@media @genericPhone{ 
+	#discounts li{ width: 100%; margin-left: 0;
+		h4{font-size: 1.4em;}
+	}
+	#faux-footer{ padding: 1em; 
+		i{ margin-right: .5em; }
+	}
+
+}
+

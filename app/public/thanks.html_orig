@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+
+        <meta property="og:title" content="Site Title"/>
+        <meta property="og:type" content="game"/>
+        <meta property="og:url" content="http://www.domain.com/"/>
+        <meta property="og:image" content="http://domain.com/img/logo.png"/>
+        <meta property="og:site_name" content="Site Name"/>
+        <meta property="fb:admins" content="100003704743719"/>
+        <meta property="og:description"
+              content=""/>
+
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:description" content=""/>
+        <meta name="twitter:site" content="@XdesignInc">
+        <meta name="twitter:creator" content="@thatgibbyguy">
+        
+        <link rel="author" href="https://plus.google.com/107253397855691647531/posts"/>
+
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="/js/libs/modernizr.js"></script>
+    </head>
+<body>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    <div class="background">
+        <section>
+            <div class="units-row">
+                <section class="wrapper unit-80">
+                    
+                    <article class="units-row units-padding bg-lightgray">
+                        <h1 class="brand"><a href="/"><img src="img/HBD_Logo_Final_Color.png" alt="HomeBuyer Discounts"></a></h1>    
+                    </article>
+                    <article id="signup" class="units-row units-padding bg-turquoise">
+                        <div class="unit-100">
+                                <h1>Thank You!</h1>
+                                <p>A redemption code will be sent to you within 24 - 48 hours.</p>
+                        </div>
+                    </article>
+                    <article id="btn-area"class="units-row units-padding bg-lightgray">
+                        <div class="units-row">
+                            <div class="unit-100">
+                                <span class="btn bg-red">￼START BROWSING FOR GREAT DEALS!</span>
+                                <p>If you have any questions please email <a href="mailto:info@homebuyerdiscounts.com">info@homebuyerdiscounts.com</a></p>
+                            </div>
+                        </div>
+                    </article>
+                    <article id="faux-footer" class="units-row units-padding bg-blue">
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="icon icon-phone"></i><span><a href="tel://225-928-4119">225-928-4119</a></span>
+                            </li>
+                            <li>
+                                <i class="icon icon-envelope"></i><span><a href="mailto:info@homebuyerdiscounts.com">info@homebuyerdiscounts.com</a></span>
+                            </li>
+                        </ul>
+                    </article>
+                    
+                </section>
+                
+            </div>
+            
+        </section>
+        
+    </div>    
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="/js/plugins.js"></script>
+  <script src="/js/script.min.js"></script>
+  <script src="//localhost:35729/livereload.js"></script>
+</body>
+</html>

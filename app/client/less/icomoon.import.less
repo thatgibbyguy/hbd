@@ -1,0 +1,56 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('font/icomoon.eot');
+	src:url('font/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('font/icomoon.svg#icomoon') format('svg'),
+		url('font/icomoon.woff') format('woff'),
+		url('font/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icomoon-branding:before, .icomoon-print:before, .icomoon-responsive:before, .icomoon-mobile-phone:before, .icomoon-facebook:before, .icomoon-twitter:before, .icomoon-web:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icomoon-branding:before {
+	content: "\62";
+}
+.icomoon-print:before {
+	content: "\70";
+}
+.icomoon-responsive:before {
+	content: "\72";
+}
+.icomoon-mobile-phone:before {
+	content: "\6d";
+}
+.icomoon-facebook:before {
+	content: "\66";
+}
+.icomoon-twitter:before {
+	content: "\74";
+}
+.icomoon-web:before {
+	content: "\77";
+}
